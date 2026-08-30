@@ -2,18 +2,13 @@
 
 ## Objective
 
-Configure a simple Local Area Network using two PCs connected through a Layer 2 Cisco switch and verify connectivity between the devices.
+Configure a simple Local Area Network using two PCs connected through a Layer 2 Cisco 2960 switch and verify connectivity between the devices.
 
 ## Network Topology
 
-PC1 → Cisco 2960 Switch → PC2
+The network consists of two PCs connected to a Cisco 2960 switch.
 
-## Devices
-
-* 2 × PCs
-* 1 × Cisco 2960 switch
-* Copper Ethernet connections
-* Cisco Packet Tracer
+![Network Topology](topology.png)
 
 ## IP Address Configuration
 
@@ -22,17 +17,30 @@ PC1 → Cisco 2960 Switch → PC2
 | PC1    | 192.168.1.10 | 255.255.255.0 |
 | PC2    | 192.168.1.11 | 255.255.255.0 |
 
-No default gateway is required because both PCs are on the same local network.
+Both PCs are configured on the same IPv4 subnet. No default gateway is required because communication takes place within the local network.
 
-## Testing
+### PC1 Configuration
 
-Connectivity was tested from PC1 using:
+![PC1 IP Configuration](pc1-ip-configuration.png)
+
+## Connectivity Test
+
+Connectivity was tested from PC1 using ICMP:
 
 ```text
 ping 192.168.1.11
 ```
 
-The test returned successful replies, confirming connectivity between PC1 and PC2.
+The test returned successful replies, confirming communication between PC1 and PC2.
+
+![Successful Ping Test](successful-ping.png)
+
+## Devices and Tools
+
+* 2 × PCs
+* 1 × Cisco 2960 switch
+* Ethernet connections
+* Cisco Packet Tracer
 
 ## Skills Practiced
 
@@ -40,12 +48,19 @@ The test returned successful replies, confirming connectivity between PC1 and PC
 * Subnet masks
 * LAN configuration
 * Ethernet connectivity
+* Layer 2 switching
 * ICMP ping testing
-* Cisco 2960 switching
+* Basic network troubleshooting
 * Cisco Packet Tracer
+
+## Project File
+
+The Cisco Packet Tracer project is included in this repository:
+
+[Download the Packet Tracer project](01-basic-lan.pkt)
 
 ## Project Status
 
-Completed.
+**Completed**
 
 This is a personal networking practice project created to develop practical networking and IT support skills.
