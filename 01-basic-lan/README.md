@@ -10,30 +10,14 @@ The network consists of two PCs connected to a Cisco 2960 switch.
 
 ![Network Topology](topology.png)
 
-## IP Address Configuration
+## IP Configuration and Connectivity Test
 
-| Device | IPv4 Address | Subnet Mask   |
-| ------ | ------------ | ------------- |
-| PC1    | 192.168.1.10 | 255.255.255.0 |
-| PC2    | 192.168.1.11 | 255.255.255.0 |
+PC1 was configured with the IPv4 address `192.168.1.10` and subnet mask `255.255.255.0`. Connectivity was then tested from PC1 by sending ICMP requests to PC2 at `192.168.1.11`.
 
-Both PCs are configured on the same IPv4 subnet. No default gateway is required because communication takes place within the local network.
+![PC1 Configuration and Successful Ping](pc1-and-ping.png)
 
-### PC1 Configuration
+The successful ping responses confirm that PC1 and PC2 can communicate across the local network.
 
-![PC1 IP Configuration](pc1-ip-configuration.png)
-
-## Connectivity Test
-
-Connectivity was tested from PC1 using ICMP:
-
-```text
-ping 192.168.1.11
-```
-
-The test returned successful replies, confirming communication between PC1 and PC2.
-
-![Successful Ping Test](successful-ping.png)
 
 ## Devices and Tools
 
